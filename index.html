@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load Videos</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+    <!-- <figure>
+        <img src="./assets/images/Webflow-Jumbo-Effect-Cards-Slider-Poster.png" alt="" />
+        <video preload="meta" playsinline="" muted="" loop="" autoplay>
+            <source src="./assets/videos/Webflow-Jumbo-Effect-Cards-Slider.mp4" type="video/mp4" />
+        </video>
+    </figure>
+    <figure>
+        <img src="./assets/images/Webflow-Carousel-Thumbs-Slider-Poster.png" alt="" />
+        <video preload="meta" playsinline="" muted="" loop="" autoplay>
+            <source src="./assets/videos/Webflow-Carousel-Thumbs-Slider.webm" type="video/webm" />
+        </video>
+    </figure> -->
+
+    <figure data-lazy-video-src="./assets/videos/Webflow-Jumbo-Effect-Cards-Slider.mp4">
+        <img class="class" src="./assets/images/Webflow-Jumbo-Effect-Cards-Slider-Poster.png" alt="Webflow-Jumbo-Effect-Cards-Slider-Poster" width="700" loading="lazy" fetchpriority="low" decoding="async" />
+    </figure>
+    <figure data-lazy-video-src="./assets/videos/Webflow-Carousel-Thumbs-Slider.webm" data-lazy-video-type="webm">
+        <img class="class" src="./assets/images/Webflow-Carousel-Thumbs-Slider-Poster.png" alt="Webflow-Carousel-Thumbs-Slider-Poster" width="700" loading="lazy" fetchpriority="low" decoding="async" />
+    </figure>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js" defer></script>
+</body>
+</html>
